@@ -3,6 +3,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
 import static org.junit.Assert.assertEquals;
 
 public class BasicTest {
@@ -10,7 +12,10 @@ public class BasicTest {
 
     @Before
     public void setUp() throws Exception {
-        driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors","--disable-extensions","--no-sandbox","--disable-dev-shm-usage");
+        options.addArguments("--headless");
+        driver = new ChromeDriver(options);
     }
 
     @Test
@@ -18,7 +23,7 @@ public class BasicTest {
     {
         driver.get("https://freeqacamp.com/");
         String actualTitle = driver.getTitle();
-        String expectedTitle = "freeqacamp";
+        String expectedTitle = "freeqacamp – software testing tutorials and interview prep";
         assertEquals(expectedTitle,actualTitle);
     }
 

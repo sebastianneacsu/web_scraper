@@ -20,7 +20,7 @@ public class CSVWriter {
         ) {
             csvPrinter.printRecord("1", "Sundar Pichai ♥", "CEO", "Google");
             csvPrinter.printRecord("2", "Satya Nadella", "CEO", "Microsoft");
-            csvPrinter.printRecord("3", "Tim cook", "CEO", "Apple");
+            csvPrinter.printRecord("3", "Tim Cook", "CEO", "Apple");
 
             csvPrinter.printRecord(Arrays.asList("4", "Mark Zuckerberg", "CEO", "Facebook"));
 

@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d254200a-578b-4b2e-b798-fda1ba128dd4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BasicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BasicTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +46,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="JUnit.BasicTest">
+  <component name="RunManager" selected="JUnit.BasicTest.test">
     <configuration name="CSVWriter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="CSVWriter" />
       <module name="web_scraper" />
@@ -98,9 +98,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BasicTest.test" />
         <item itemvalue="JUnit.BasicTest" />
         <item itemvalue="Application.CSVWriter" />
-        <item itemvalue="JUnit.BasicTest.test" />
         <item itemvalue="JUnit.DownloadFileRevisited" />
         <item itemvalue="Application.SortingList" />
       </list>
@@ -131,39 +131,47 @@
       <option name="project" value="LOCAL" />
       <updated>1611478490173</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added docker instructions">
+      <created>1611479292083</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1611479292083</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added csv writing library and poc" />
     <MESSAGE value="added headless option" />
-    <option name="LAST_COMMIT_MESSAGE" value="added headless option" />
+    <MESSAGE value="added docker instructions" />
+    <option name="LAST_COMMIT_MESSAGE" value="added docker instructions" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="351" y="17" key="CommitChangelistDialog2" timestamp="1611478489889">
+    <state x="351" y="17" key="CommitChangelistDialog2" timestamp="1611479291903">
       <screen x="0" y="0" width="1440" height="836" />
     </state>
-    <state x="351" y="17" key="CommitChangelistDialog2/0.0.1440.836@0.0.1440.836" timestamp="1611478489889" />
-    <state width="1398" height="206" key="GridCell.Tab.0.bottom" timestamp="1611477417639">
+    <state x="351" y="17" key="CommitChangelistDialog2/0.0.1440.836@0.0.1440.836" timestamp="1611479291903" />
+    <state width="1398" height="206" key="GridCell.Tab.0.bottom" timestamp="1612075869925">
       <screen x="0" y="0" width="1440" height="836" />
     </state>
-    <state width="1398" height="206" key="GridCell.Tab.0.bottom/0.0.1440.836@0.0.1440.836" timestamp="1611477417639" />
-    <state width="1398" height="206" key="GridCell.Tab.0.center" timestamp="1611477417638">
+    <state width="1398" height="206" key="GridCell.Tab.0.bottom/0.0.1440.836@0.0.1440.836" timestamp="1612075869925" />
+    <state width="1398" height="206" key="GridCell.Tab.0.center" timestamp="1612075869924">
       <screen x="0" y="0" width="1440" height="836" />
     </state>
-    <state width="1398" height="206" key="GridCell.Tab.0.center/0.0.1440.836@0.0.1440.836" timestamp="1611477417638" />
-    <state width="1398" height="206" key="GridCell.Tab.0.left" timestamp="1611477417638">
+    <state width="1398" height="206" key="GridCell.Tab.0.center/0.0.1440.836@0.0.1440.836" timestamp="1612075869924" />
+    <state width="1398" height="206" key="GridCell.Tab.0.left" timestamp="1612075869923">
       <screen x="0" y="0" width="1440" height="836" />
     </state>
-    <state width="1398" height="206" key="GridCell.Tab.0.left/0.0.1440.836@0.0.1440.836" timestamp="1611477417638" />
-    <state width="1398" height="206" key="GridCell.Tab.0.right" timestamp="1611477417639">
+    <state width="1398" height="206" key="GridCell.Tab.0.left/0.0.1440.836@0.0.1440.836" timestamp="1612075869923" />
+    <state width="1398" height="206" key="GridCell.Tab.0.right" timestamp="1612075869925">
       <screen x="0" y="0" width="1440" height="836" />
     </state>
-    <state width="1398" height="206" key="GridCell.Tab.0.right/0.0.1440.836@0.0.1440.836" timestamp="1611477417639" />
-    <state x="320" y="155" key="Vcs.Push.Dialog.v2" timestamp="1611478492430">
+    <state width="1398" height="206" key="GridCell.Tab.0.right/0.0.1440.836@0.0.1440.836" timestamp="1612075869925" />
+    <state x="320" y="155" key="Vcs.Push.Dialog.v2" timestamp="1611479297561">
       <screen x="0" y="0" width="1440" height="836" />
     </state>
-    <state x="320" y="155" key="Vcs.Push.Dialog.v2/0.0.1440.836@0.0.1440.836" timestamp="1611478492430" />
+    <state x="320" y="155" key="Vcs.Push.Dialog.v2/0.0.1440.836@0.0.1440.836" timestamp="1611479297561" />
   </component>
   <component name="masterDetails">
     <states>

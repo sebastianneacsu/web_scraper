@@ -2,13 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d254200a-578b-4b2e-b798-fda1ba128dd4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/ImmoWeb.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/BasicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BasicTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CSVWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/utils/CSVWriter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -45,6 +50,12 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/java" />
+      <recent name="$PROJECT_DIR$/src/test/utils" />
+    </key>
   </component>
   <component name="RunManager" selected="JUnit.BasicTest.test">
     <configuration name="CSVWriter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -152,26 +163,30 @@
       <screen x="0" y="0" width="1440" height="836" />
     </state>
     <state x="351" y="17" key="CommitChangelistDialog2/0.0.1440.836@0.0.1440.836" timestamp="1611479291903" />
-    <state width="1398" height="206" key="GridCell.Tab.0.bottom" timestamp="1612075869925">
+    <state width="1398" height="206" key="GridCell.Tab.0.bottom" timestamp="1612248184805">
       <screen x="0" y="0" width="1440" height="836" />
     </state>
-    <state width="1398" height="206" key="GridCell.Tab.0.bottom/0.0.1440.836@0.0.1440.836" timestamp="1612075869925" />
-    <state width="1398" height="206" key="GridCell.Tab.0.center" timestamp="1612075869924">
+    <state width="1398" height="206" key="GridCell.Tab.0.bottom/0.0.1440.836@0.0.1440.836" timestamp="1612248184805" />
+    <state width="1398" height="206" key="GridCell.Tab.0.center" timestamp="1612248184804">
       <screen x="0" y="0" width="1440" height="836" />
     </state>
-    <state width="1398" height="206" key="GridCell.Tab.0.center/0.0.1440.836@0.0.1440.836" timestamp="1612075869924" />
-    <state width="1398" height="206" key="GridCell.Tab.0.left" timestamp="1612075869923">
+    <state width="1398" height="206" key="GridCell.Tab.0.center/0.0.1440.836@0.0.1440.836" timestamp="1612248184804" />
+    <state width="1398" height="206" key="GridCell.Tab.0.left" timestamp="1612248184804">
       <screen x="0" y="0" width="1440" height="836" />
     </state>
-    <state width="1398" height="206" key="GridCell.Tab.0.left/0.0.1440.836@0.0.1440.836" timestamp="1612075869923" />
-    <state width="1398" height="206" key="GridCell.Tab.0.right" timestamp="1612075869925">
+    <state width="1398" height="206" key="GridCell.Tab.0.left/0.0.1440.836@0.0.1440.836" timestamp="1612248184804" />
+    <state width="1398" height="206" key="GridCell.Tab.0.right" timestamp="1612248184805">
       <screen x="0" y="0" width="1440" height="836" />
     </state>
-    <state width="1398" height="206" key="GridCell.Tab.0.right/0.0.1440.836@0.0.1440.836" timestamp="1612075869925" />
+    <state width="1398" height="206" key="GridCell.Tab.0.right/0.0.1440.836@0.0.1440.836" timestamp="1612248184805" />
     <state x="320" y="155" key="Vcs.Push.Dialog.v2" timestamp="1611479297561">
       <screen x="0" y="0" width="1440" height="836" />
     </state>
     <state x="320" y="155" key="Vcs.Push.Dialog.v2/0.0.1440.836@0.0.1440.836" timestamp="1611479297561" />
+    <state x="385" y="160" width="670" height="676" key="search.everywhere.popup" timestamp="1612250283156">
+      <screen x="0" y="0" width="1440" height="836" />
+    </state>
+    <state x="385" y="160" width="670" height="676" key="search.everywhere.popup/0.0.1440.836@0.0.1440.836" timestamp="1612250283156" />
   </component>
   <component name="masterDetails">
     <states>

@@ -27,4 +27,19 @@ public class CSVWriter {
             csvPrinter.flush();
         }
     }
+
+
+    public static void printApartments(String[] apartmentDetails) throws IOException {
+        try (
+                BufferedWriter writer = Files.newBufferedWriter(Paths.get(SAMPLE_CSV_FILE));
+
+                CSVPrinter csvPrinter = new CSVPrinter(writer, CSVFormat.DEFAULT
+                        .withHeader("ID", "Name", "Designation", "Company", "fdsfsd"));
+        ) {
+            csvPrinter.printRecord(Arrays.asList(apartmentDetails));
+           // csvPrinter.printRecord(Arrays.asList("4", "Mark Zuckerberg", "CEO", "Facebook"));
+
+            csvPrinter.flush();
+        }
+    }
 }

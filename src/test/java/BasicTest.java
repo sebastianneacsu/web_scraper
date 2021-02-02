@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 public class BasicTest {
@@ -21,12 +22,12 @@ public class BasicTest {
     }
 
     @Test
-    public void test() throws InterruptedException {
+    public void test() throws InterruptedException, IOException {
         immoWeb = new ImmoWeb(driver);
         immoWeb.navigateHomepage();
         immoWeb.searchForApartments();
-        immoWeb.getApartmentDetails();
-      //  String actualTitle = driver.getTitle();
+        immoWeb.getAllPropertiesToCSV();
+    //  String actualTitle = driver.getTitle();
     //    String expectedTitle = "freeqacamp – software testing tutorials and interview prep";
   //      assertEquals(expectedTitle,actualTitle);
     }

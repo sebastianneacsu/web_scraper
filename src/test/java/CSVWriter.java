@@ -5,6 +5,7 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.Arrays;
 
 
@@ -31,10 +32,13 @@ public class CSVWriter {
 
     public static void printApartments(String[] apartmentDetails) throws IOException {
         try (
-                BufferedWriter writer = Files.newBufferedWriter(Paths.get(SAMPLE_CSV_FILE));
 
-                CSVPrinter csvPrinter = new CSVPrinter(writer, CSVFormat.DEFAULT
-                        .withHeader("ID", "Name", "Designation", "Company", "fdsfsd"));
+                BufferedWriter writer = Files.newBufferedWriter(
+                        Paths.get(SAMPLE_CSV_FILE),
+                        StandardOpenOption.APPEND,
+                        StandardOpenOption.CREATE);
+
+                CSVPrinter csvPrinter = new CSVPrinter(writer, CSVFormat.DEFAULT);
         ) {
             csvPrinter.printRecord(Arrays.asList(apartmentDetails));
            // csvPrinter.printRecord(Arrays.asList("4", "Mark Zuckerberg", "CEO", "Facebook"));

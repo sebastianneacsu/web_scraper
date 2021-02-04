@@ -26,7 +26,7 @@ public class BasicTest {
         immoWeb = new ImmoWeb(driver);
         immoWeb.navigateHomepage();
         immoWeb.searchForApartments();
-        immoWeb.getAllPropertiesToCSV();
+        immoWeb.printAllPages();
     //  String actualTitle = driver.getTitle();
     //    String expectedTitle = "freeqacamp – software testing tutorials and interview prep";
   //      assertEquals(expectedTitle,actualTitle);

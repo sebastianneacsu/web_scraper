@@ -25,6 +25,7 @@ public class ImmoWeb {
     By propertyBedrooms = By.xpath("//p[contains(concat(\" \", normalize-space(@class), \" \"), \" card__information--property\")] /*[1]");
     By propertyLocation = By.cssSelector("p[class*=\"card__information--locality\"]");
     By propertySurface = By.xpath("//p[contains(concat(\" \", normalize-space(@class), \" \"), \" card__information--property\")]");
+    By nextPageButton = By.cssSelector("a[class*=\"pagination__link--next\"]");
 
     public void navigateHomepage() throws InterruptedException {
         driver.get(baseURL);
@@ -89,15 +90,23 @@ public class ImmoWeb {
 
         System.out.println(" PRICE = " + price + " BED = " + bedrooms + " COMMUNE = " + commune + " AREA = " + surface
                 + " CODE = " + postCode);
-        return new String[]{price, bedrooms, location, surface, postCode};
+        return new String[]{price, bedrooms, commune, surface, postCode};
     }
     public void getAllPropertiesToCSV() throws IOException {
         List<WebElement> locationList = driver.findElements(propertyLocation);
 
         for (int i = 0; i < locationList.size(); i++) {
-            //String[] apartment = getApartmentDetails(i);
-            CSVWriter.printApartments(getApartmentDetails(i));
+            if(!getApartmentDetails(i)[0].contains("-") && !getApartmentDetails(i)[3].contains("-")){
+                CSVWriter.printApartments(getApartmentDetails(i));
+            }
         }
     }
-    //validations: if bedrooms class is abbreviation
+
+    public void printAllPages() throws IOException {
+        while (!driver.findElements(nextPageButton).isEmpty()){
+            getAllPropertiesToCSV();
+            driver.findElement(nextPageButton).click();
+        }
+    }
+
 }

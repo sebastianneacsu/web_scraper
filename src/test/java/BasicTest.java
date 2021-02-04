@@ -15,7 +15,7 @@ public class BasicTest {
     public void setUp() throws Exception {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors","--disable-extensions","--no-sandbox","--disable-dev-shm-usage");
-       // options.addArguments("--headless");
+        //options.addArguments("--headless");
         driver = new ChromeDriver(options);
         WebDriver.Timeouts timeouts = driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 

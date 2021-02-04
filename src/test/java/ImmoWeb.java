@@ -86,7 +86,11 @@ public class ImmoWeb {
 
         String surface = surfaceList.get(i).getText();
         surface = surface.substring(surface.indexOf("·") + 1);
-        surface = surface.substring(0, surface.indexOf("m²")).trim();
+        try {
+            surface = surface.substring(0, surface.indexOf("m²")).trim();
+        }catch (StringIndexOutOfBoundsException exception){
+            System.out.println(exception + "no surface");
+        }
 
         System.out.println(" PRICE = " + price + " BED = " + bedrooms + " COMMUNE = " + commune + " AREA = " + surface
                 + " CODE = " + postCode);
@@ -96,15 +100,17 @@ public class ImmoWeb {
         List<WebElement> locationList = driver.findElements(propertyLocation);
 
         for (int i = 0; i < locationList.size(); i++) {
-            if(!getApartmentDetails(i)[0].contains("-") && !getApartmentDetails(i)[3].contains("-")){
+            if(!getApartmentDetails(i)[0].contains("-") && !getApartmentDetails(i)[3].contains("-")
+            && (getApartmentDetails(i)[1].matches("[0-9]+") && getApartmentDetails(i)[1].length() > 0)){
                 CSVWriter.printApartments(getApartmentDetails(i));
             }
         }
     }
 
-    public void printAllPages() throws IOException {
+    public void printAllPages() throws IOException, InterruptedException {
         while (!driver.findElements(nextPageButton).isEmpty()){
             getAllPropertiesToCSV();
+            Thread.sleep(500);
             driver.findElement(nextPageButton).click();
         }
     }

@@ -22,14 +22,19 @@ public class BasicTest {
     }
 
     @Test
-    public void test() throws InterruptedException, IOException {
+    public void getApartments() throws InterruptedException, IOException {
         immoWeb = new ImmoWeb(driver);
         immoWeb.navigateHomepage();
         immoWeb.searchForApartments();
-        immoWeb.printAllPages();
-    //  String actualTitle = driver.getTitle();
-    //    String expectedTitle = "freeqacamp – software testing tutorials and interview prep";
-  //      assertEquals(expectedTitle,actualTitle);
+        immoWeb.printAllApartments();
+     }
+
+    @Test
+    public void getHouses() throws InterruptedException, IOException {
+        immoWeb = new ImmoWeb(driver);
+        immoWeb.navigateHomepage();
+        immoWeb.searchForHouses();
+        immoWeb.printAllHouses();
     }
 
     @After

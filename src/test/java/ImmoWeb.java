@@ -86,7 +86,7 @@ public class ImmoWeb {
         List<WebElement> locationList = driver.findElements(propertyLocation);
 
         for (int i = 0; i < locationList.size(); i++) {
-            if(!getApartmentDetails(i)[0].contains("-") && !getApartmentDetails(i)[3].contains("-")&& (getApartmentDetails(i)[0].matches("[0-9]+"))
+            if(!getApartmentDetails(i)[0].contains("-") && !getApartmentDetails(i)[3].contains("-")&& (getApartmentDetails(i)[0].matches("^(\\d+|\\d{1,3}(,\\d{3})*)(\\.\\d+)?$"))
                     && (getApartmentDetails(i)[1].matches("[0-9]+") && getApartmentDetails(i)[1].length() > 0)
             && (getApartmentDetails(i)[3].matches("[0-9]+"))&&(getApartmentDetails(i)[4].matches("[0-9]+"))){
                 CSVWriter.printApartments(getApartmentDetails(i));
@@ -98,7 +98,7 @@ public class ImmoWeb {
         List<WebElement> locationList = driver.findElements(propertyLocation);
 
         for (int i = 0; i < locationList.size(); i++) {
-            if(!getApartmentDetails(i)[0].contains("-") && !getApartmentDetails(i)[3].contains("-")
+            if(!getApartmentDetails(i)[0].contains("-") && !getApartmentDetails(i)[3].contains("-")&& (getApartmentDetails(i)[0].matches("^(\\d+|\\d{1,3}(,\\d{3})*)(\\.\\d+)?$"))
                     && (getApartmentDetails(i)[1].matches("[0-9]+") && getApartmentDetails(i)[1].length() > 0)
                     && (getApartmentDetails(i)[3].matches("[0-9]+"))&&(getApartmentDetails(i)[4].matches("[0-9]+"))){
                 CSVWriter.printHouses(getApartmentDetails(i));

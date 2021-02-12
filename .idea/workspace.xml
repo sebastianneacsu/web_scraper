@@ -4,6 +4,8 @@
     <list default="true" id="d254200a-578b-4b2e-b798-fda1ba128dd4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sample.csv" beforeDir="false" afterPath="$PROJECT_DIR$/sample.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BasicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BasicTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CSVWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CSVWriter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ImmoWeb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ImmoWeb.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,14 +48,7 @@
       <recent name="$PROJECT_DIR$/src/test/utils" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BasicTest.getApartments">
-    <configuration name="CSVWriter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="CSVWriter" />
-      <module name="web_scraper" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.BasicTest.getBrusselsHouses">
     <configuration name="BasicTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="web_scraper" />
       <option name="PACKAGE_NAME" value="" />
@@ -63,50 +58,60 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BasicTest.getApartments" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BasicTest.getAllProperties" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="web_scraper" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="BasicTest" />
-      <option name="METHOD_NAME" value="getApartments" />
+      <option name="METHOD_NAME" value="getAllProperties" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BasicTest.getHouses" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BasicTest.getBrusselsHouses" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="web_scraper" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="BasicTest" />
-      <option name="METHOD_NAME" value="getHouses" />
+      <option name="METHOD_NAME" value="getBrusselsHouses" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BasicTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BasicTest.getCheapestApartments" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="web_scraper" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="BasicTest" />
-      <option name="METHOD_NAME" value="test" />
+      <option name="METHOD_NAME" value="getCheapestApartments" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BasicTest.getMostExpensiveApartments" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="web_scraper" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="BasicTest" />
+      <option name="METHOD_NAME" value="getMostExpensiveApartments" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.CSVWriter" />
-      <item itemvalue="JUnit.BasicTest.test" />
+      <item itemvalue="JUnit.BasicTest.getCheapestApartments" />
+      <item itemvalue="JUnit.BasicTest.getMostExpensiveApartments" />
+      <item itemvalue="JUnit.BasicTest.getAllProperties" />
       <item itemvalue="JUnit.BasicTest" />
-      <item itemvalue="JUnit.BasicTest.getHouses" />
-      <item itemvalue="JUnit.BasicTest.getApartments" />
+      <item itemvalue="JUnit.BasicTest.getBrusselsHouses" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BasicTest.getApartments" />
-        <item itemvalue="JUnit.BasicTest.getHouses" />
-        <item itemvalue="JUnit.BasicTest.test" />
+        <item itemvalue="JUnit.BasicTest.getBrusselsHouses" />
         <item itemvalue="JUnit.BasicTest" />
-        <item itemvalue="Application.CSVWriter" />
+        <item itemvalue="JUnit.BasicTest.getAllProperties" />
+        <item itemvalue="JUnit.BasicTest.getMostExpensiveApartments" />
+        <item itemvalue="JUnit.BasicTest.getCheapestApartments" />
       </list>
     </recent_temporary>
   </component>
@@ -156,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612808324642</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added number validation for price">
+      <created>1612808798581</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1612808798581</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -176,43 +188,48 @@
       <screen x="-1920" y="0" width="1536" height="824" />
     </state>
     <state x="-1750" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824/-1920.0.1536.824@-1920.0.1536.824" timestamp="1612474680634" />
-    <state x="374" y="17" key="CommitChangelistDialog2" timestamp="1612808323595">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="-1546" y="17" key="CommitChangelistDialog2" timestamp="1612808797620">
+      <screen x="-1920" y="0" width="1536" height="824" />
     </state>
     <state x="351" y="17" key="CommitChangelistDialog2/0.0.1440.836@0.0.1440.836" timestamp="1612304821311" />
+    <state x="-1546" y="17" key="CommitChangelistDialog2/0.0.1536.824/-1920.0.1536.824@-1920.0.1536.824" timestamp="1612808797620" />
     <state x="374" y="17" key="CommitChangelistDialog2/0.0.1536.824/-1920.0.1536.824@0.0.1536.824" timestamp="1612808323595" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1612808584370">
-      <screen x="-1920" y="0" width="1536" height="824" />
+    <state width="1493" height="95" key="GridCell.Tab.0.bottom" timestamp="1613118358050">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1398" height="223" key="GridCell.Tab.0.bottom/0.0.1440.836@0.0.1440.836" timestamp="1612466188731" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.0.1536.824@-1920.0.1536.824" timestamp="1612808584370" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.0.1536.824@0.0.1536.824" timestamp="1612808503202" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.0.1536.824@-1920.0.1536.824" timestamp="1613062537163" />
+    <state width="1493" height="95" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.0.1536.824@0.0.1536.824" timestamp="1613118358050" />
     <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1536.824@0.0.1536.824" timestamp="1612281109251" />
     <state width="1493" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1536.824@1920.0.1536.824" timestamp="1612282486716" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1612808584370">
-      <screen x="-1920" y="0" width="1536" height="824" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1612820415969" />
+    <state width="1493" height="95" key="GridCell.Tab.0.center" timestamp="1613118358049">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1398" height="223" key="GridCell.Tab.0.center/0.0.1440.836@0.0.1440.836" timestamp="1612466188730" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824/-1920.0.1536.824@-1920.0.1536.824" timestamp="1612808584370" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824/-1920.0.1536.824@0.0.1536.824" timestamp="1612808503202" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824/-1920.0.1536.824@-1920.0.1536.824" timestamp="1613062537163" />
+    <state width="1493" height="95" key="GridCell.Tab.0.center/0.0.1536.824/-1920.0.1536.824@0.0.1536.824" timestamp="1613118358049" />
     <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1536.824@0.0.1536.824" timestamp="1612281109251" />
     <state width="1493" height="261" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1536.824@1920.0.1536.824" timestamp="1612282486716" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1612808584370">
-      <screen x="-1920" y="0" width="1536" height="824" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1612820415969" />
+    <state width="1493" height="95" key="GridCell.Tab.0.left" timestamp="1613118358049">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1398" height="223" key="GridCell.Tab.0.left/0.0.1440.836@0.0.1440.836" timestamp="1612466188730" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824/-1920.0.1536.824@-1920.0.1536.824" timestamp="1612808584370" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824/-1920.0.1536.824@0.0.1536.824" timestamp="1612808503202" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824/-1920.0.1536.824@-1920.0.1536.824" timestamp="1613062537162" />
+    <state width="1493" height="95" key="GridCell.Tab.0.left/0.0.1536.824/-1920.0.1536.824@0.0.1536.824" timestamp="1613118358049" />
     <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1536.824@0.0.1536.824" timestamp="1612281109250" />
     <state width="1493" height="261" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1536.824@1920.0.1536.824" timestamp="1612282486716" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1612808584370">
-      <screen x="-1920" y="0" width="1536" height="824" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1612820415969" />
+    <state width="1493" height="95" key="GridCell.Tab.0.right" timestamp="1613118358050">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1398" height="223" key="GridCell.Tab.0.right/0.0.1440.836@0.0.1440.836" timestamp="1612466188731" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824/-1920.0.1536.824@-1920.0.1536.824" timestamp="1612808584370" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824/-1920.0.1536.824@0.0.1536.824" timestamp="1612808503202" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824/-1920.0.1536.824@-1920.0.1536.824" timestamp="1613062537163" />
+    <state width="1493" height="95" key="GridCell.Tab.0.right/0.0.1536.824/-1920.0.1536.824@0.0.1536.824" timestamp="1613118358050" />
     <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1536.824@0.0.1536.824" timestamp="1612281109251" />
     <state width="1493" height="261" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1536.824@1920.0.1536.824" timestamp="1612282486716" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1612820415969" />
     <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1612282498497">
       <screen x="1920" y="0" width="1536" height="824" />
     </state>
@@ -233,11 +250,16 @@
     </state>
     <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.1536.824@0.0.1536.824" timestamp="1612281033840" />
     <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.1536.824@1920.0.1536.824" timestamp="1612282498497" />
-    <state x="341" y="153" key="Vcs.Push.Dialog.v2" timestamp="1612808330987">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="-1579" y="153" key="Vcs.Push.Dialog.v2" timestamp="1612808800254">
+      <screen x="-1920" y="0" width="1536" height="824" />
     </state>
     <state x="320" y="155" key="Vcs.Push.Dialog.v2/0.0.1440.836@0.0.1440.836" timestamp="1612304823808" />
+    <state x="-1579" y="153" key="Vcs.Push.Dialog.v2/0.0.1536.824/-1920.0.1536.824@-1920.0.1536.824" timestamp="1612808800254" />
     <state x="341" y="153" key="Vcs.Push.Dialog.v2/0.0.1536.824/-1920.0.1536.824@0.0.1536.824" timestamp="1612808330987" />
+    <state x="0" y="0" width="1507" height="810" key="dock-window-1" timestamp="1613062628404">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="0" y="0" width="1507" height="810" key="dock-window-1/0.0.1536.824/-1920.0.1536.824@-1920.0.1536.824" timestamp="1613062628404" />
     <state x="482" y="28" key="refactoring.ChangeSignatureDialog" timestamp="1612302248280">
       <screen x="0" y="0" width="1440" height="836" />
     </state>

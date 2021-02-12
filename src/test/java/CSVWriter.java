@@ -10,8 +10,9 @@ import java.util.Arrays;
 
 
 public class CSVWriter {
-    private static final String SAMPLE_CSV_FILE = "./sample.csv";
-    private static final String HOUSES_CSV_FILE = "./houses.csv";
+    private static final String SAMPLE_CSV_FILE = "./properties" + (int)(Math.random()*1000) + ".csv";
+    private static final String HOUSES_CSV_FILE = "./houses" + (int)(Math.random()*1000) + ".csv";
+    private static final String APARTMENTS_CSV_FILE = "./apartments" + (int)(Math.random()*1000) + ".csv";
 
     public static void main(String[] args) throws IOException {
         try (
@@ -31,23 +32,6 @@ public class CSVWriter {
     }
 
 
-    public static void printApartments(String[] apartmentDetails) throws IOException {
-        try (
-
-                BufferedWriter writer = Files.newBufferedWriter(
-                        Paths.get(SAMPLE_CSV_FILE),
-                        StandardOpenOption.APPEND,
-                        StandardOpenOption.CREATE);
-
-                CSVPrinter csvPrinter = new CSVPrinter(writer, CSVFormat.DEFAULT);
-        ) {
-            csvPrinter.printRecord(Arrays.asList(apartmentDetails));
-           // csvPrinter.printRecord(Arrays.asList("4", "Mark Zuckerberg", "CEO", "Facebook"));
-
-            csvPrinter.flush();
-        }
-    }
-
     public static void printHouses(String[] apartmentDetails) throws IOException {
         try (
 
@@ -58,7 +42,24 @@ public class CSVWriter {
 
                 CSVPrinter csvPrinter = new CSVPrinter(writer, CSVFormat.DEFAULT);
         ) {
-            csvPrinter.printRecord(Arrays.asList(apartmentDetails));
+            csvPrinter.printRecord(Arrays.asList(apartmentDetails), "2021-02-11", "immoweb", "H");
+            // csvPrinter.printRecord(Arrays.asList("4", "Mark Zuckerberg", "CEO", "Facebook"));
+
+            csvPrinter.flush();
+        }
+    }
+
+    public static void printApartments(String[] apartmentDetails) throws IOException {
+        try (
+
+                BufferedWriter writer = Files.newBufferedWriter(
+                        Paths.get(APARTMENTS_CSV_FILE),
+                        StandardOpenOption.APPEND,
+                        StandardOpenOption.CREATE);
+
+                CSVPrinter csvPrinter = new CSVPrinter(writer, CSVFormat.DEFAULT);
+        ) {
+            csvPrinter.printRecord(Arrays.asList(apartmentDetails), "2021-02-11", "immoweb", "A");
             // csvPrinter.printRecord(Arrays.asList("4", "Mark Zuckerberg", "CEO", "Facebook"));
 
             csvPrinter.flush();

@@ -3,6 +3,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 public class ImmoWeb {
@@ -15,28 +17,7 @@ public class ImmoWeb {
     }
 
     String baseURL = "https://www.immoweb.be/en";
-    String antwerpApartments = "https://www.immoweb.be/en/search/apartment/for-sale/antwerp/province?countries=BE&orderBy=newest";
-    String antwerpHouses = "https://www.immoweb.be/en/search/house/for-sale/antwerp/province?countries=BE&orderBy=newest";
-    String limbourgApartments = "https://www.immoweb.be/en/search/apartment/for-sale/limbourg/province?countries=BE&orderBy=newest";
-    String limbourgHouses = "https://www.immoweb.be/en/search/house/for-sale/limbourg/province?countries=BE&orderBy=newest";
-    String eastFlandersApartments = "https://www.immoweb.be/en/search/apartment/for-sale/east-flanders/province?countries=BE&orderBy=newest";
-    String eastFlandersHouses = "https://www.immoweb.be/en/search/house/for-sale/east-flanders/province?countries=BE&orderBy=newest";
-    String westFlandersApartments = "https://www.immoweb.be/en/search/apartment/for-sale/west-flanders/province?countries=BE&orderBy=newest";
-    String westFlandersHouses = "https://www.immoweb.be/en/search/house/for-sale/west-flanders/province?countries=BE&orderBy=newest";
-    String walloonBrabantApartments = "https://www.immoweb.be/en/search/apartment/for-sale/walloon-brabant/province?countries=BE&orderBy=newest";
-    String walloonBrabantHouses = "https://www.immoweb.be/en/search/house/for-sale/walloon-brabant/province?countries=BE&orderBy=newest";
-    String flemishBrabantApartments =  "https://www.immoweb.be/en/search/apartment/for-sale/flemish-brabant/province?countries=BE&orderBy=newest";
-    String flemishBrabantHouses = "https://www.immoweb.be/en/search/house/for-sale/flemish-brabant/province?countries=BE&orderBy=newest";
-    String hainautApartments = "https://www.immoweb.be/en/search/apartment/for-sale/hainaut/province?countries=BE&orderBy=newest";
-    String hainautHouses = "https://www.immoweb.be/en/search/house/for-sale/hainaut/province?countries=BE&orderBy=newest";
-    String liegeApartments = "https://www.immoweb.be/en/search/apartment/for-sale/liege/province?countries=BE&orderBy=newest";
-    String liegeHouses = "https://www.immoweb.be/en/search/house/for-sale/liege/province?countries=BE&orderBy=newest";
-    String luxembourgApartments = "https://www.immoweb.be/en/search/apartment/for-sale/luxembourg/province?countries=BE&orderBy=newest";
-    String luxembourgHouses = "https://www.immoweb.be/en/search/house/for-sale/luxembourg/province?countries=BE&orderBy=newest";
-    String namurApartments = "https://www.immoweb.be/en/search/apartment/for-sale/namur/province?countries=BE&orderBy=newest";
-    String namurHouses = "https://www.immoweb.be/en/search/house/for-sale/namur/province?countries=BE&orderBy=newest";
-    String brusselsApartments = "https://www.immoweb.be/en/search/apartment/for-sale/brussels/province?countries=BE&orderBy=newest";
-    String brusselsHouses = "https://www.immoweb.be/en/search/house/for-sale/brussels/province?countries=BE&orderBy=newest";
+    String mostRecentProperties = "https://www.immoweb.be/en/search/house-and-apartment/for-sale?countries=BE&orderBy=newest";
 
     By keepBrowsingPopUp = By.cssSelector("button[aria-label=\"Keep browsing\"]");
     By propertyTypeDropDown = By.cssSelector("button[id*=\"propertyTypesDesktop\"]");
@@ -80,6 +61,12 @@ public class ImmoWeb {
     }
 
     public String [] getApartmentDetails(int i){
+
+        Date date = new Date();
+        SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
+        String strDate = formatter.format(date);
+        System.out.println("Date Format with dd-MM-yyyy : "+ strDate);
+
         List<WebElement> priceList = driver.findElements(propertyPrice);
         List<WebElement> bedroomList = driver.findElements(propertyBedrooms);
         List<WebElement> locationList = driver.findElements(propertyLocation);
@@ -103,30 +90,18 @@ public class ImmoWeb {
 
 
             System.out.println(" PRICE = " + price + " BED = " + bedrooms + " COMMUNE = " + commune + " AREA = " + surface
-                    + " CODE = " + postCode);
-            return new String[]{price, bedrooms, commune, surface, postCode};
+                    + " CODE = " + postCode + "DATE = " + strDate);
+            return new String[]{price, bedrooms, commune, surface, postCode, strDate};
         }
 
         catch (Exception exception){
             System.out.println(exception + "ERROR");
-            return new String[]{"ERROR", "ERROR", "ERROR", "ERROR", "ERROR"};
+            return new String[]{"ERROR", "ERROR", "ERROR", "ERROR", "ERROR", "ERROR"};
         }
     }
 
 
-    public void getAllApartmentsToCSV() throws IOException {
-        List<WebElement> locationList = driver.findElements(propertyLocation);
-
-        for (int i = 0; i < locationList.size(); i++) {
-            if(!getApartmentDetails(i)[0].contains("-") && !getApartmentDetails(i)[3].contains("-")&& (getApartmentDetails(i)[0].matches("^(\\d+|\\d{1,3}(,\\d{3})*)(\\.\\d+)?$"))
-                    && (getApartmentDetails(i)[1].matches("[0-9]+") && getApartmentDetails(i)[1].length() > 0)
-                    && (getApartmentDetails(i)[3].matches("[0-9]+"))&&(getApartmentDetails(i)[4].matches("[0-9]+"))){
-                CSVWriter.printApartments(getApartmentDetails(i));
-            }
-        }
-    }
-
-    public void getAllHousesToCSV() throws IOException {
+    public void getAllPropertiesToCSV() throws IOException {
         List<WebElement> locationList = driver.findElements(propertyLocation);
 
         for (int i = 0; i < locationList.size(); i++) {
@@ -138,17 +113,11 @@ public class ImmoWeb {
         }
     }
 
-    public void printAllApartments() throws IOException, InterruptedException {
-        while (!driver.findElements(nextPageButton).isEmpty()){
-            getAllApartmentsToCSV();
-            Thread.sleep(500);
-            driver.findElement(nextPageButton).click();
-        }
-    }
 
-    public void printAllHouses() throws IOException, InterruptedException {
+
+    public void printAllProperties() throws IOException, InterruptedException {
         while (!driver.findElements(nextPageButton).isEmpty()){
-            getAllHousesToCSV();
+            getAllPropertiesToCSV();
             Thread.sleep(500);
             driver.findElement(nextPageButton).click();
         }

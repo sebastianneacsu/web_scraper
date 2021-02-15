@@ -63,7 +63,7 @@ public class ImmoWeb {
     public String [] getApartmentDetails(int i){
 
         Date date = new Date();
-        SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
         String strDate = formatter.format(date);
         System.out.println("Date Format with dd-MM-yyyy : "+ strDate);
 

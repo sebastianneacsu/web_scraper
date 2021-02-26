@@ -11,6 +11,7 @@ import java.util.concurrent.TimeUnit;
 public class BasicTest {
     WebDriver driver;
     ImmoWeb immoWeb;
+    ImobiliareRo imobiliareRo;
     @Before
     public void setUp() throws Exception {
         ChromeOptions options = new ChromeOptions();
@@ -28,6 +29,12 @@ public class BasicTest {
         immoWeb.printAllProperties();
     }
 
+    @Test
+    public void getMostRecentPropertiesBucharest()throws InterruptedException, IOException {
+        imobiliareRo = new ImobiliareRo(driver);
+        imobiliareRo.navigateCustomUrl(imobiliareRo.mostRecentProperties);
+        imobiliareRo.printAllProperties();
+    }
     @After
     public void tearDown() throws Exception {
         driver.quit();

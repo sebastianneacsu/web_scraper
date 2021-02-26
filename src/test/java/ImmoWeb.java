@@ -90,7 +90,7 @@ public class ImmoWeb {
 
 
             System.out.println(" PRICE = " + price + " BED = " + bedrooms + " COMMUNE = " + commune + " AREA = " + surface
-                    + " CODE = " + postCode + "DATE = " + strDate);
+                    + " CODE = " + postCode + " DATE = " + strDate);
             return new String[]{price, bedrooms, commune, surface, postCode, strDate};
         }
 

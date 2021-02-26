@@ -39,9 +39,10 @@ public class ImobiliareRo {
         List<WebElement> surfaceList = driver.findElements(propertySurface);
 
         try {
-            String price = priceList.get(i).getText().trim();
+            String price = priceList.get(i).getText();
+            price = price.replace(".", "");
 
-            String bedrooms = bedroomList.get(i).getText();
+                        String bedrooms = bedroomList.get(i).getText();
             bedrooms = bedrooms.substring(0, bedrooms.indexOf("camere")).trim();
 
 
@@ -65,9 +66,10 @@ public class ImobiliareRo {
         List<WebElement> locationList = driver.findElements(propertyPrice);
 
         for (int i = 0; i < locationList.size(); i++) {
-            if(!getApartmentDetails(i)[0].contains("-") && !getApartmentDetails(i)[3].contains("-")&& (getApartmentDetails(i)[0].matches("^(\\d+|\\d{1,3}(,\\d{3})*)(\\.\\d+)?$"))
-                    && (getApartmentDetails(i)[1].matches("[0-9]+") && getApartmentDetails(i)[1].length() > 0)
-                    && (getApartmentDetails(i)[2].matches("[0-9]+"))){
+              if(      getApartmentDetails(i)[0].matches("^(\\d+|\\d{1,3}(,\\d{3})*)(\\.\\d+)?$")
+                    && getApartmentDetails(i)[1].matches("^(\\d+|\\d{1,3}(,\\d{3})*)(\\.\\d+)?$")
+                    && getApartmentDetails(i)[2].matches("^(\\d+|\\d{1,3}(,\\d{3})*)(\\.\\d+)?$"))
+            {
                 CSVWriter.printHouses(getApartmentDetails(i));
             }
         }

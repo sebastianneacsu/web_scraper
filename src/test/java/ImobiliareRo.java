@@ -21,7 +21,7 @@ public class ImobiliareRo {
     By acceptCookies = By.xpath("(//*[text()[contains(.,\"Accept toate cookie-urile\")]])[2]");
 
     By propertyPrice = By.cssSelector("span[class*=\"pret-mare\"]");
-    By propertyBedrooms = By.xpath("//*[contains(concat(' ', normalize-space(@class), ' '), 'caracteristici')] //*[text()[contains(.,\"camere\")]]");
+    By propertyBedrooms = By.xpath("//*[contains(concat(' ', normalize-space(@class), ' '), 'caracteristici')] //*[text()[contains(.,\"camer\")]]");
     By propertySurface = By.xpath("//*[contains(concat(' ', normalize-space(@class), ' '), 'caracteristici')] //*[text()[contains(.,\"mp utili\")]]");
 
     By nextPageButton = By.cssSelector("a[class*=\"inainte butonpaginare\"]");
@@ -42,8 +42,9 @@ public class ImobiliareRo {
             String price = priceList.get(i).getText();
             price = price.replace(".", "");
 
-                        String bedrooms = bedroomList.get(i).getText();
-            bedrooms = bedrooms.substring(0, bedrooms.indexOf("camere")).trim();
+            String bedrooms = bedroomList.get(i).getText();
+            bedrooms = bedrooms.substring(0, bedrooms.indexOf("camer")).trim();
+            if (bedrooms.contains("o")){bedrooms = "1";}
 
 
             String surface = surfaceList.get(i).getText();

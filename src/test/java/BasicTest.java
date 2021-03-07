@@ -1,6 +1,7 @@
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -12,12 +13,20 @@ public class BasicTest {
     WebDriver driver;
     ImmoWeb immoWeb;
     ImobiliareRo imobiliareRo;
-    @Before
-    public void setUp() throws Exception {
+      @Before
+   public void setUp() throws Exception {
+
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors","--disable-extensions","--no-sandbox","--disable-dev-shm-usage");
+        options.addArguments("--disable-blink-features=AutomationControlled");
+        options.addArguments("--disable-gpu", "--ignore-certificate-errors","--disable-extensions","--no-sandbox","--disable-dev-shm-usage");
+        options.addArguments("--start-maximized");
+        options.addArguments("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36");
+
         //options.addArguments("--headless");
         driver = new ChromeDriver(options);
+        driver.manage().deleteAllCookies();
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})");
         WebDriver.Timeouts timeouts = driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
     }

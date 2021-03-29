@@ -81,7 +81,7 @@ public class ImobiliareRo {
     public void printAllProperties() throws IOException, InterruptedException {
         while (!driver.findElements(nextPageButton).isEmpty()){
             getAllPropertiesToCSV();
-            Thread.sleep(2000);
+            Thread.sleep(3000);
             driver.findElement(nextPageButton).click();
         }
     }

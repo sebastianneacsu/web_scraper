@@ -20,7 +20,7 @@ public class BasicTest {
         options.addArguments("--disable-blink-features=AutomationControlled");
         options.addArguments("--disable-gpu", "--ignore-certificate-errors","--disable-extensions","--no-sandbox","--disable-dev-shm-usage");
         options.addArguments("--start-maximized");
-        options.addArguments("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36");
+        options.addArguments("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36");
 
         //options.addArguments("--headless");
         driver = new ChromeDriver(options);

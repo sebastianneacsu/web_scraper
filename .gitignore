@@ -54,6 +54,7 @@ auto-import.
 .idea/compiler.xml
 .idea/jarRepositories.xml
 .idea/modules.xml
+.idea/workspace.xml
 .idea/*.iml
 .idea/modules
 *.iml
@@ -67,3 +68,4 @@ out/
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
+.idea/workspace.xml
